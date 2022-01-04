@@ -36,7 +36,7 @@ DT = t1 - t0
 h = q1 - q0
 
 # Select the trajectory type
-trajectory = "seventh"
+trajectory = "fifth"
 
 # Init the lists
 t = [t0]
@@ -180,7 +180,7 @@ if trajectory == "seventh":
 
 # Plot the outcomes
 
-fig, (ax1, ax2, ax3, ax4) = plt.subplots(nrows=4, ncols=1, figsize = (10, 15))
+fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(nrows=2, ncols=2, figsize = (25, 15))
 fig.suptitle(method)
 ax1.plot(t, q, color = "red", label = EqLab)
 ax2.plot(t, qd, color = "blue", label = "$\dot{q}$ $[m/s]$")
